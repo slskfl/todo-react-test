@@ -24,14 +24,14 @@ class App extends React.Component{
     item.done = false;
     thisItems.push(item);
     this.setState({items : thisItems});
-    console.log("items - " , this.state.items);
+    console.log("app add items - " , this.state.items);
   }
 
   delete = (item) =>{
     const thisItems = this.state.items;
     const newItems = thisItems.filter(e => e.id !== item.id);
     this.setState({items : newItems}, () => {
-      console.log("delete items : " , this.state.items)
+      console.log("app delete items : " , this.state.items)
     });
   }
 
